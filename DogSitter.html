@@ -3,111 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Hero Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Larissa Ablas - Dog Hero</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif; /* Define a fonte padrão para o site */
+            margin: 0; /* Remove a margem padrão */
+            padding: 0; /* Remove o preenchimento padrão */
         }
+        h1, h2, h3 {
+            color: #d32f2f; /* Define a cor principal para os títulos */
+        }
+        a {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            color: #d32f2f; /* Define a cor dos links */
+        }
+        ul {
+            list-style: none; /* Remove os marcadores de lista */
+            padding: 0; /* Remove o preenchimento da lista */
+        }
+        .container {
+            width: 90%; /* Define a largura da seção */
+            margin: 0 auto; /* Centraliza o conteúdo */
+        }
+        
+        /* Header */
         header {
-            background: #f4a261;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background-color: #d32f2f; /* Fundo vermelho para o cabeçalho */
+            color: white; /* Cor do texto do cabeçalho */
+            padding: 20px 0; /* Espaçamento interno do cabeçalho */
         }
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
+        header nav {
+            display: flex; /* Usa flexbox para organizar o menu */
+            justify-content: space-between; /* Espaça os itens igualmente */
+            align-items: center; /* Alinha verticalmente ao centro */
         }
-        nav ul li {
-            margin: 0 15px;
+        header nav ul {
+            display: flex; /* Cria um layout horizontal para os links */
+            gap: 20px; /* Espaçamento entre os itens do menu */
         }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-        }
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-        }
+
+        /* Hero Section */
         .hero {
-            background: #2a9d8f;
-            color: #fff;
-            padding: 80px 20px;
+            background-color: #fbe9e7; /* Fundo claro para o destaque inicial */
+            padding: 60px 0; /* Espaçamento interno grande */
+            text-align: center; /* Centraliza o texto */
         }
-        .form-section {
-            background: #e9c46a;
+        .hero img {
+            max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
+            height: auto; /* Mantém a proporção da imagem */
         }
-        form input, form textarea, form button {
-            display: block;
-            margin: 10px auto;
-            width: 80%;
-            padding: 10px;
+
+        /* About Section */
+        .about {
+            padding: 60px 0; /* Espaçamento interno grande */
+            text-align: center; /* Centraliza o conteúdo */
         }
-        form button {
-            background: #264653;
-            color: #fff;
-            border: none;
-            cursor: pointer;
+        .about img {
+            width: 150px; /* Largura fixa para a imagem do perfil */
+            height: 150px; /* Altura fixa para manter o círculo */
+            border-radius: 50%; /* Torna a imagem circular */
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #ffccbc; /* Fundo laranja-claro para os serviços */
+            padding: 60px 0; /* Espaçamento interno grande */
+        }
+        .services .service-item {
+            margin: 20px; /* Espaçamento externo entre os itens */
+            padding: 20px; /* Espaçamento interno para os cartões */
+            background-color: white; /* Fundo branco para destaque */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            padding: 60px 0; /* Espaçamento interno grande */
+            text-align: center; /* Centraliza o texto */
+        }
+        .portfolio img {
+            max-width: 300px; /* Largura máxima para cada imagem */
+            margin: 10px; /* Espaçamento entre as imagens */
+            border-radius: 8px; /* Bordas arredondadas para suavidade */
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #fbe9e7; /* Fundo claro para a seção de testemunhos */
+            padding: 60px 0; /* Espaçamento interno grande */
+        }
+        .testimonials .testimonial {
+            margin: 20px; /* Espaçamento externo entre os testemunhos */
+            padding: 20px; /* Espaçamento interno dos cartões */
+            background-color: white; /* Fundo branco para destaque */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+            text-align: center; /* Centraliza o conteúdo dos testemunhos */
+        }
+        .testimonials img {
+            width: 100px; /* Define a largura das fotos dos clientes */
+            height: 100px; /* Define a altura das fotos dos clientes */
+            border-radius: 50%; /* Torna as fotos circulares */
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 0; /* Espaçamento interno grande */
+            text-align: center; /* Centraliza o conteúdo */
+        }
+        .contact form {
+            max-width: 600px; /* Define a largura máxima do formulário */
+            margin: 0 auto; /* Centraliza o formulário */
+        }
+        .contact input, .contact textarea, .contact button {
+            width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+            padding: 10px; /* Espaçamento interno para os campos */
+            margin: 10px 0; /* Espaçamento externo entre os campos */
+        }
+        .contact button {
+            background-color: #d32f2f; /* Fundo vermelho para o botão */
+            color: white; /* Texto branco para contraste */
+            border: none; /* Remove a borda padrão */
+            cursor: pointer; /* Altera o cursor para indicar que é clicável */
         }
     </style>
 </head>
 <body>
+    <!-- Cabeçalho com menu de navegação -->
     <header>
-        <h1>Dog Hero Services</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#portfolio">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <h1>Larissa Ablas - Dog Hero</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testemunhos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="home" class="section hero">
-        <h2>Bem-vindo ao Dog Hero</h2>
-        <p>Cuido do seu pet como se fosse meu!</p>
+    <!-- Seção inicial com destaque -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Bem-vindo à Dog Hero</h2>
+            <p>Cuidando do seu pet como se fosse meu!</p>
+            <img src="dog-hero-image.jpg" alt="Dog Hero">
+        </div>
     </section>
 
-    <section id="about" class="section">
-        <h2>Sobre</h2>
-        <p>Sou uma amante de animais que oferece serviços confiáveis e carinhosos de cuidados para pets. Meu objetivo é garantir a felicidade e o bem-estar do seu animalzinho.</p>
+    <!-- Seção sobre Larissa Ablas -->
+    <section id="about" class="about">
+        <div class="container">
+            <img src="larissa-profile.jpg" alt="Larissa Ablas">
+            <h2>Sobre Larissa Ablas</h2>
+            <p>Amante dos animais, com anos de experiência cuidando de pets com amor e dedicação.</p>
+        </div>
     </section>
 
-    <section id="services" class="section">
-        <h2>Serviços</h2>
-        <ul>
-            <li>Hospedagem domiciliar</li>
-            <li>Creche para cães</li>
-            <li>Passeios personalizados</li>
-        </ul>
+    <!-- Seção de serviços oferecidos -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Serviços</h2>
+            <div class="service-item">
+                <h3>Hospedagem</h3>
+                <p>Cuidado em casa para o seu pet.</p>
+            </div>
+            <div class="service-item">
+                <h3>Passeios</h3>
+                <p>Passeios personalizados e seguros.</p>
+            </div>
+            <div class="service-item">
+                <h3>Creche</h3>
+                <p>Ambiente divertido e supervisionado.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="portfolio" class="section">
-        <h2>Projetos</h2>
-        <p>Confira algumas histórias de sucesso com pets felizes e donos satisfeitos:</p>
-        <img src="pet1.jpg" alt="Pet feliz" style="width:80%; max-width:300px; margin:10px;">
-        <img src="pet2.jpg" alt="Cão brincando" style="width:80%; max-width:300px; margin:10px;">
+    <!-- Seção de portfolio com imagens de pets -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <img src="pet1.jpg" alt="Pet feliz">
+            <img src="pet2.jpg" alt="Cão brincando">
+        </div>
     </section>
 
-    <section id="contact" class="section form-section">
-        <h2>Contato</h2>
-        <form action="#" method="post">
-            <input type="text" name="name" placeholder="Seu nome" required>
-            <input type="email" name="email" placeholder="Seu email" required>
-            <textarea name="message" rows="5" placeholder="Sua mensagem"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-        <p>Ou entre em contato pelo WhatsApp:</p>
-        <a href="https://wa.me/SEU_NUMERO" target="_blank" style="color: #264653; font-weight: bold;">Clique aqui</a>
+    <!-- Seção de testemunhos de clientes -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Testemunhos</h2>
+            <div class="testimonial">
+                <img src="client1.jpg" alt="Cliente feliz">
+                <p>"Larissa é incrível! Meu cachorro nunca foi tão bem cuidado."</p>
+            </div>
+            <div class="testimonial">
+                <img src="client2.jpg" alt="Cliente feliz">
+                <p>"Serviço excepcional e muito amor envolvido. Recomendo!"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de contato com formulário -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu email" required>
+                <textarea name="message" rows="5" placeholder="Sua mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <p>Ou fale comigo no WhatsApp:</p>
+            <a href="https://wa.me/SEU_NUMERO" target="_blank">Clique aqui</a>
+        </div>
     </section>
 </body>
 </html>
