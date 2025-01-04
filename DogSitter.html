@@ -3,225 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Larissa Ablas - Dog Hero</title>
+    <title>Dog Hero - Larissa Ablas</title>
     <style>
-        /* General Styles */
+        /* Resetando margens e padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo geral do body */
         body {
-            font-family: Arial, sans-serif; /* Define a fonte padrão para o site */
-            margin: 0; /* Remove a margem padrão */
-            padding: 0; /* Remove o preenchimento padrão */
+            font-family: 'Arial', sans-serif;
+            background-color: #d6dfd5; /* Cor de fundo semelhante ao da imagem */
+            color: #333;
         }
-        h1, h2, h3 {
-            color: #d32f2f; /* Define a cor principal para os títulos */
-        }
-        a {
-            text-decoration: none; /* Remove o sublinhado dos links */
-            color: #d32f2f; /* Define a cor dos links */
-        }
-        ul {
-            list-style: none; /* Remove os marcadores de lista */
-            padding: 0; /* Remove o preenchimento da lista */
-        }
-        .container {
-            width: 90%; /* Define a largura da seção */
-            margin: 0 auto; /* Centraliza o conteúdo */
-        }
-        
-        /* Header */
+
+        /* Cabeçalho */
         header {
-            background-color: #d32f2f; /* Fundo vermelho para o cabeçalho */
-            color: white; /* Cor do texto do cabeçalho */
-            padding: 20px 0; /* Espaçamento interno do cabeçalho */
-        }
-        header nav {
-            display: flex; /* Usa flexbox para organizar o menu */
-            justify-content: space-between; /* Espaça os itens igualmente */
-            align-items: center; /* Alinha verticalmente ao centro */
-        }
-        header nav ul {
-            display: flex; /* Cria um layout horizontal para os links */
-            gap: 20px; /* Espaçamento entre os itens do menu */
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #ccc;
         }
 
-        /* Hero Section */
-        .hero {
-            background-color: #fbe9e7; /* Fundo claro para o destaque inicial */
-            padding: 60px 0; /* Espaçamento interno grande */
-            text-align: center; /* Centraliza o texto */
-        }
-        .hero img {
-            max-width: 100%; /* Garante que a imagem não ultrapasse o contêiner */
-            height: auto; /* Mantém a proporção da imagem */
+        /* Logotipo */
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000;
         }
 
-        /* About Section */
-        .about {
-            padding: 60px 0; /* Espaçamento interno grande */
-            text-align: center; /* Centraliza o conteúdo */
-        }
-        .about img {
-            width: 150px; /* Largura fixa para a imagem do perfil */
-            height: 150px; /* Altura fixa para manter o círculo */
-            border-radius: 50%; /* Torna a imagem circular */
+        /* Navegação */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
         }
 
-        /* Services Section */
+        nav ul li {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e63946; /* Vermelho destacado */
+        }
+
+        /* Seção principal */
+        .main-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+            background-color: #f8f9fa; /* Fundo claro */
+        }
+
+        .main-banner img {
+            max-width: 40%;
+            border-radius: 10px;
+        }
+
+        .main-banner .info {
+            max-width: 50%;
+        }
+
+        .main-banner .info h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #e63946;
+        }
+
+        .main-banner .info p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        /* Botões principais */
+        .main-banner .info .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #e63946;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .main-banner .info .btn:hover {
+            background-color: #bf2d38;
+        }
+
+        /* Serviços */
         .services {
-            background-color: #ffccbc; /* Fundo laranja-claro para os serviços */
-            padding: 60px 0; /* Espaçamento interno grande */
-        }
-        .services .service-item {
-            margin: 20px; /* Espaçamento externo entre os itens */
-            padding: 20px; /* Espaçamento interno para os cartões */
-            background-color: white; /* Fundo branco para destaque */
-            border-radius: 8px; /* Bordas arredondadas */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+            text-align: center;
+            padding: 2rem 0;
         }
 
-        /* Portfolio Section */
-        .portfolio {
-            padding: 60px 0; /* Espaçamento interno grande */
-            text-align: center; /* Centraliza o texto */
-        }
-        .portfolio img {
-            max-width: 300px; /* Largura máxima para cada imagem */
-            margin: 10px; /* Espaçamento entre as imagens */
-            border-radius: 8px; /* Bordas arredondadas para suavidade */
+        .services h2 {
+            font-size: 2rem;
+            color: #e63946;
         }
 
-        /* Testimonials Section */
+        .services .cards {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .services .card {
+            width: 250px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .services .card:hover {
+            transform: scale(1.05);
+        }
+
+        .services .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .services .card h3 {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            color: #333;
+        }
+
+        .services .card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Testemunhos */
         .testimonials {
-            background-color: #fbe9e7; /* Fundo claro para a seção de testemunhos */
-            padding: 60px 0; /* Espaçamento interno grande */
-        }
-        .testimonials .testimonial {
-            margin: 20px; /* Espaçamento externo entre os testemunhos */
-            padding: 20px; /* Espaçamento interno dos cartões */
-            background-color: white; /* Fundo branco para destaque */
-            border-radius: 8px; /* Bordas arredondadas */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
-            text-align: center; /* Centraliza o conteúdo dos testemunhos */
-        }
-        .testimonials img {
-            width: 100px; /* Define a largura das fotos dos clientes */
-            height: 100px; /* Define a altura das fotos dos clientes */
-            border-radius: 50%; /* Torna as fotos circulares */
+            padding: 2rem;
+            background-color: #f8f9fa;
         }
 
-        /* Contact Section */
-        .contact {
-            padding: 60px 0; /* Espaçamento interno grande */
-            text-align: center; /* Centraliza o conteúdo */
+        .testimonials h2 {
+            text-align: center;
+            color: #e63946;
+            font-size: 2rem;
         }
-        .contact form {
-            max-width: 600px; /* Define a largura máxima do formulário */
-            margin: 0 auto; /* Centraliza o formulário */
+
+        .testimonials .testimonial {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
         }
-        .contact input, .contact textarea, .contact button {
-            width: 100%; /* Garante que os campos ocupem toda a largura disponível */
-            padding: 10px; /* Espaçamento interno para os campos */
-            margin: 10px 0; /* Espaçamento externo entre os campos */
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #fff;
+            border-top: 2px solid #ccc;
+            margin-top: 2rem;
         }
-        .contact button {
-            background-color: #d32f2f; /* Fundo vermelho para o botão */
-            color: white; /* Texto branco para contraste */
-            border: none; /* Remove a borda padrão */
-            cursor: pointer; /* Altera o cursor para indicar que é clicável */
+
+        footer p {
+            font-size: 0.9rem;
+            color: #666;
         }
+
+        footer p a {
+            text-decoration: none;
+            color: #e63946;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
-    <!-- Cabeçalho com menu de navegação -->
     <header>
-        <div class="container">
-            <nav>
-                <h1>Larissa Ablas - Dog Hero</h1>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#testimonials">Testemunhos</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="logo">Dog Hero</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Seção inicial com destaque -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Bem-vindo à Dog Hero</h2>
-            <p>Cuidando do seu pet como se fosse meu!</p>
-            <img src="dog-hero-image.jpg" alt="Dog Hero">
+    <section class="main-banner">
+        <div class="info">
+            <h1>Larissa Ablas</h1>
+            <p>Your trusted Dog Hero for premium pet care services.</p>
+            <a href="#contact" class="btn">Contact Me</a>
         </div>
+        <img src="dog-hero-banner.jpg" alt="Larissa with dogs">
     </section>
 
-    <!-- Seção sobre Larissa Ablas -->
-    <section id="about" class="about">
-        <div class="container">
-            <img src="larissa-profile.jpg" alt="Larissa Ablas">
-            <h2>Sobre Larissa Ablas</h2>
-            <p>Amante dos animais, com anos de experiência cuidando de pets com amor e dedicação.</p>
-        </div>
-    </section>
-
-    <!-- Seção de serviços oferecidos -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Serviços</h2>
-            <div class="service-item">
-                <h3>Hospedagem</h3>
-                <p>Cuidado em casa para o seu pet.</p>
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="service1.jpg" alt="Dog Walking">
+                <h3>Dog Walking</h3>
+                <p>Professional and loving dog walking services for your furry friends.</p>
             </div>
-            <div class="service-item">
-                <h3>Passeios</h3>
-                <p>Passeios personalizados e seguros.</p>
+            <div class="card">
+                <img src="service2.jpg" alt="Pet Sitting">
+                <h3>Pet Sitting</h3>
+                <p>Safe and comfortable pet sitting at your home or ours.</p>
             </div>
-            <div class="service-item">
-                <h3>Creche</h3>
-                <p>Ambiente divertido e supervisionado.</p>
+            <div class="card">
+                <img src="service3.jpg" alt="Training">
+                <h3>Training</h3>
+                <p>Expert training to ensure your pets are well-behaved and happy.</p>
             </div>
         </div>
     </section>
 
-    <!-- Seção de portfolio com imagens de pets -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <img src="pet1.jpg" alt="Pet feliz">
-            <img src="pet2.jpg" alt="Cão brincando">
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <p>"Larissa is the best! My dog loves her walks and always comes back happy."</p>
+        </div>
+        <div class="testimonial">
+            <p>"Reliable and caring, Larissa treated my pet like her own. Highly recommend!"</p>
         </div>
     </section>
 
-    <!-- Seção de testemunhos de clientes -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2>Testemunhos</h2>
-            <div class="testimonial">
-                <img src="client1.jpg" alt="Cliente feliz">
-                <p>"Larissa é incrível! Meu cachorro nunca foi tão bem cuidado."</p>
-            </div>
-            <div class="testimonial">
-                <img src="client2.jpg" alt="Cliente feliz">
-                <p>"Serviço excepcional e muito amor envolvido. Recomendo!"</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de contato com formulário -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contato</h2>
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu email" required>
-                <textarea name="message" rows="5" placeholder="Sua mensagem"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-            <p>Ou fale comigo no WhatsApp:</p>
-            <a href="https://wa.me/SEU_NUMERO" target="_blank">Clique aqui</a>
-        </div>
-    </section>
+    <footer>
+        <p>&copy; 2025 Dog Hero. Made with ❤️ by Larissa Ablas.</p>
+    </footer>
 </body>
 </html>
