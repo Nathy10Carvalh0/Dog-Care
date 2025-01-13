@@ -1,0 +1,234 @@
+ /* Resetando margens e padding */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilo geral do body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d6dfd5; /* Cor de fundo semelhante ao da imagem */
+    color: #333;
+}
+/* Cabeçalho */
+header {
+    background-color: #e63946;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ccc;
+    
+}
+/* Logotipo */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+nav ul li {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #768774; /* Vermelho destacado */
+}
+/* Seção principal */
+.main-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f8f9fa; /* Fundo claro */
+}
+.main-banner img {
+    max-width: 40%;
+    border-radius: 10px;
+}
+.main-banner .info {
+    max-width: 50%;
+}
+
+.main-banner .info h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e63946;
+}
+.main-banner .info p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+/* Botões principais */
+.main-banner .info .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+.main-banner .info .btn:hover {
+    background-color: #bf2d38;
+}
+
+/* Serviços */
+.services {
+    text-align: center;
+    padding: 2rem 0;
+}
+.services h2 {
+    font-size: 1.4rem;
+    color: #e63946;
+    padding: 8px;
+    
+}
+.services .cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.services .card {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.services .card:hover {
+    transform: scale(1.05);
+}
+.services .card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.services .card h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    color: #333;
+    text-align: center;
+}
+.services .card p {
+    font-size: 1rem;
+    color: #666;
+    text-align: left;
+}
+/* Seção de Testemunhos */
+#testimonials {
+background-color: #f9f9f9; /* Fundo claro */
+padding: 50px 20px; /* Espaçamento interno */
+text-align: center; /* Texto centralizado */
+}
+
+#testimonials h2 {
+font-size: 2.5em; /* Tamanho do título */
+color: #333; /* Cor do título */
+margin-bottom: 30px; /* Espaço abaixo do título */
+}
+
+.testimonials-container {
+max-width: 1200px; /* Largura máxima */
+margin: 0 auto; /* Centralização */
+}
+
+.testimonials-grid {
+display: flex; /* Layout flexível */
+flex-wrap: wrap; /* Permite quebra de linha para cards */
+gap: 20px; /* Espaçamento entre cards */
+justify-content: center; /* Centraliza os cards */
+}
+
+.testimonial-card {
+background-color: #e2bfbf; /* Fundo branco para os cards */
+border: 1px solid #ddd; /* Borda leve */
+border-radius: 10px; /* Bordas arredondadas */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+max-width: 300px; /* Largura máxima dos cards */
+padding: 20px; /* Espaçamento interno dos cards */
+text-align: center; /* Centraliza o conteúdo */
+}
+
+.client-photo {
+width: 260px; /* Tamanho da foto */
+height: 260px; /* Mantém a proporção quadrada */
+border-radius: 15%; /* Foto circular */
+margin: 0 auto 15px; /* Centraliza a foto e adiciona espaço abaixo */
+object-fit: cover; /* Ajusta a imagem para caber no espaço */
+}
+
+.client-name {
+font-size: 1.2em; /* Destaque para o nome */
+color: #e63946; /* Cor do destaque (vermelho, como preferido) */
+margin-bottom: 10px; /* Espaço abaixo do nome */
+}
+
+.testimonial-text {
+font-size: 1em; /* Texto padrão para depoimentos */
+color: #555; /* Cor do texto */
+line-height: 1.6; /* Altura da linha */
+}
+/* Seção About */
+#about {
+
+padding: 50px 20px; /* Espaçamento interno */
+text-align: center; /* Centralizar texto */
+}
+
+#about .about-container {
+max-width: 800px; /* Largura máxima */
+margin: 0 auto; /* Centraliza no meio da tela */
+}
+
+#about h2 {
+font-size: 2.5em; /* Tamanho do título */
+color: #333; /* Cor do texto */
+margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+#about p {
+font-size: 1.1em; /* Tamanho do texto */
+line-height: 1.6; /* Altura da linha */
+color: #555; /* Cor do texto */
+margin-bottom: 15px; /* Espaçamento entre parágrafos */
+}
+
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-top: 2px solid #ccc;
+    margin-top: 2rem;
+}
+footer p {
+    font-size: 0.9rem;
+    color: #666;
+}
+footer p a {
+    text-decoration: none;
+    color: #e63946;
+    font-weight: bold;
+}
