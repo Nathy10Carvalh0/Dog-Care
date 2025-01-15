@@ -4,11 +4,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*variaveis light-dark mode*/
+:root{
+   --light-color: #ededed;
+    --dark-color:  #494949;
+    --gray-color: #d9d6d6;
+}
+.dark-theme{
+    --dark-color: #ededed;
+    --light-color:  #251919;
+    --gray-color: #2d2525;
+
+}
+
 /* Estilo geral do body */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #d6dfd5; /* Cor de fundo semelhante ao da imagem */
-    color: #333;
+    background-color: var(--gray-color); /* Cor de fundo semelhante ao da imagem */
+    color: var(--dark-color);
 }
 /* Cabeçalho */
 header {
@@ -17,25 +30,31 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--light-color);
     
 }
 /* Logotipo */
 .logo {
     font-size: 2rem;
     font-weight: bold;
-    color: #ffffff;
+    color:var(--light-color);
 }
 /* Navegação */
+
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
 }
+#icon{
+    width: 22px;
+    cursor: pointer;
+}
 nav ul li {
     font-size: 1rem;
     font-weight: bold;
-    color: #ffffff;
+    color:var(--light-color);
 }
 nav ul li a {
     text-decoration: none;
@@ -51,7 +70,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    background-color: #f8f9fa; /* Fundo claro */
+    background-color: var(--light-color); /* Fundo claro */
 }
 .main-banner img {
     max-width: 40%;
@@ -76,7 +95,7 @@ nav ul li a:hover {
     display: inline-block;
     padding: 0.8rem 1.5rem;
     background-color: #e63946;
-    color: #fff;
+    color: var(--light-color);
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -107,12 +126,12 @@ nav ul li a:hover {
 }
 .services .card {
     width: 300px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background-color: var(--light-color);
+    border: 1px solid var(--light-color);
     border-radius: 10px;
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--dark-color);
     transition: transform 0.3s;
 }
 
@@ -127,24 +146,24 @@ nav ul li a:hover {
 .services .card h3 {
     font-size: 1.8rem;
     margin: 1rem 0;
-    color: #333;
+    color: var(--dark-color);
     text-align: center;
 }
 .services .card p {
     font-size: 1rem;
-    color: #666;
+    color: var(--dark-color);
     text-align: left;
 }
 /* Seção de Testemunhos */
 #testimonials {
-background-color: #f9f9f9; /* Fundo claro */
+background-color: var(--light-color); /* Fundo claro */
 padding: 50px 20px; /* Espaçamento interno */
 text-align: center; /* Texto centralizado */
 }
 
 #testimonials h2 {
 font-size: 2.5em; /* Tamanho do título */
-color: #333; /* Cor do título */
+color: var(--dark-color); /* Cor do título */
 margin-bottom: 30px; /* Espaço abaixo do título */
 }
 
@@ -161,10 +180,10 @@ justify-content: center; /* Centraliza os cards */
 }
 
 .testimonial-card {
-background-color: #e2bfbf; /* Fundo branco para os cards */
-border: 1px solid #ddd; /* Borda leve */
+background-color:var(--light-color); /* Fundo branco para os cards */
+border: 1px solid var(--light-color); /* Borda leve */
 border-radius: 10px; /* Bordas arredondadas */
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+box-shadow: 0 4px 6px var(--dark-color); /* Sombra suave */
 max-width: 300px; /* Largura máxima dos cards */
 padding: 20px; /* Espaçamento interno dos cards */
 text-align: center; /* Centraliza o conteúdo */
@@ -186,7 +205,7 @@ margin-bottom: 10px; /* Espaço abaixo do nome */
 
 .testimonial-text {
 font-size: 1em; /* Texto padrão para depoimentos */
-color: #555; /* Cor do texto */
+color:var(--dark-color); /* Cor do texto */
 line-height: 1.6; /* Altura da linha */
 }
 /* Seção About */
@@ -203,14 +222,14 @@ margin: 0 auto; /* Centraliza no meio da tela */
 
 #about h2 {
 font-size: 2.5em; /* Tamanho do título */
-color: #333; /* Cor do texto */
+color: var(--dark-color); /* Cor do texto */
 margin-bottom: 20px; /* Espaço abaixo do título */
 }
 
 #about p {
 font-size: 1.1em; /* Tamanho do texto */
 line-height: 1.6; /* Altura da linha */
-color: #555; /* Cor do texto */
+color: var(--dark-color); /* Cor do texto */
 margin-bottom: 15px; /* Espaçamento entre parágrafos */
 }
 
@@ -219,13 +238,13 @@ margin-bottom: 15px; /* Espaçamento entre parágrafos */
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #fff;
-    border-top: 2px solid #ccc;
+    background-color: var(--light-color);
+    border-top: 2px solid var(--light-color);
     margin-top: 2rem;
 }
 footer p {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--dark-color);
 }
 footer p a {
     text-decoration: none;
@@ -233,6 +252,6 @@ footer p a {
     font-weight: bold;
 }
 footer p a:hover{
-    color: #768774;
+    color: var(--dark-color);
 
 }
